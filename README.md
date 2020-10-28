@@ -1,2 +1,1 @@
-# jd-javaspring-projects
-Java &amp; Spring
+# Java & Spring Projects
