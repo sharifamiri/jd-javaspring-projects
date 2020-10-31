@@ -6,16 +6,16 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
-@Primary
+import java.math.BigDecimal;
+
 @Component
-@PropertySource("classpath:application.properties")
 public class Bedroom implements Floor {
 
-    @Value("${side}")
-    private int side;
+    @Value("${width}")
+    BigDecimal width;
 
     @Override
-    public double getFloorArea() {
-        return side * side;
+    public BigDecimal getArea() {
+        return width.pow(2);
     }
 }

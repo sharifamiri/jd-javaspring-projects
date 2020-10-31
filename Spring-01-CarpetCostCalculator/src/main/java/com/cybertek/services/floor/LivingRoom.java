@@ -5,17 +5,20 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
+import java.math.BigDecimal;
+
 @Component
-@PropertySource("classpath:application.properties")
 public class LivingRoom implements Floor {
 
     @Value("${width}")
-    private int width;
+    BigDecimal width;
+
     @Value("${height}")
-    private int height;
+    BigDecimal height;
+
 
     @Override
-    public double getFloorArea() {
-        return width * height;
+    public BigDecimal getArea() {
+        return width.multiply(height);
     }
 }

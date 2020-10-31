@@ -1,8 +1,8 @@
 package com.cybertek.enums;
 
 public enum City {
-    Dallas("Dallas"),Austin("Austin"),SanAntonio("San Antonio"),
-    Arlington("Arlington"),Fairfax("Fairfax"),McLean("McLean");
+    DALLAS("Dallas"), AUSTIN("Austin"), SAN_ANTONIO("San Antonio"),
+    ARLINGTON("Arlington"), FAIRFAX("Fairfax"), MC_LEAN("McLean");
 
     private final String value;
     City(String value) {

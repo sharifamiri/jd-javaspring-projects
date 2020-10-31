@@ -5,17 +5,20 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
+import java.math.BigDecimal;
+
 @Component
-@PropertySource("classpath:application.properties")
 public class Kitchen implements Floor {
 
     @Value("${radius}")
-    private int radius;
+    BigDecimal radius;
+
+    //Optional
     @Value("${pi}")
-    private double pi;
+    BigDecimal pi;
 
     @Override
-    public double getFloorArea() {
-        return radius * radius * pi;
+    public BigDecimal getArea() {
+        return radius.pow(2).multiply(new BigDecimal(Math.PI));
     }
 }
